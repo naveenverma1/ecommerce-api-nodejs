@@ -71,7 +71,7 @@ maincontroller.logi = async function(req,res){
    // crATE AND ASSIGN TOKEN
     
     const token = await jwt.sign({_id : user._id},process.env.TOKEN_SECRET)
-    res.header("auth-token", token).send(token);
+    res.header("auth-token", token).send({"message":"logged in",token});
     
     res.send("logged in")
     }

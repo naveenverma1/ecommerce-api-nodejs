@@ -35,25 +35,23 @@ const upload = multer({
     // fileFilter: fileFilter
 });
 
-router.get('/getproduct', function(req, res) {
+router.get('/getcategories', verify,function(req, res) {
     ProductsController.getproducts(req, res);
   });
 
 
-router.post('/addproduct',upload.single('productImage'), function(req, res) {
+  
+router.post('/addproduct',upload.single('productImage'),veriy, function(req, res) {
     ProductsController.saveproduct(req, res);
   });
 
+  router.get('/getproduct', verify,function(req, res) {
+    ProductsController.getproduc(req, res);
+  });
 
-
-// router.get('/', checkAuth, ProductsController.getAllProducts);
-
- //router.post('/', checkAuth, upload.single('productImage'), ProductsController.createOneProduct);
-
-// router.get('/:productId', checkAuth, ProductsController.getOneProduct);
-
-// router.patch('/:productId', checkAuth,  ProductsController.updateOneProduct);
-
-// router.delete('/:productId', checkAuth, ProductsController.deleteOneProduct);
 
 module.exports = router;
+
+
+
+
