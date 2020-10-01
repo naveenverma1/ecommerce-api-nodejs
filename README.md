@@ -1,5 +1,17 @@
 # ecommerce-epi-nodejs
 
+
+Getting started
+
+git clone https://github.com/naveenverma1/ecommerce-api-nodejs.git
+
+npm install
+
+
+node server.js --- to start
+
+Then take a look at http://localhost:3000/.
+
 JWT (JSON web tokens) authentication (decode/encode) - Login middleware
 
 Admin and user API
